@@ -18,12 +18,12 @@ insert into orders value ('009', '99.65', '01');
 insert into orders value ('002', '100', '02');
 
 Answer:
-select distinct customer_name from customer, orders where orders.order_amt < 100;
+select distinct customer_name from customers, orders where orders.order_amt < 100;
 
 or
 
-select customer.customer_name from customer join orders on customer.customer_id = orders.customer_id where orders.order_amt < 100;
+select customers.customer_name from customers join orders on customer.customer_id = orders.customer_id where orders.order_amt < 100;
 
 or
 
-select customer.customer_name from customer natural join orders where orders.order_amt < 100;
+select customers.customer_name from customers natural join orders where orders.order_amt < 100;

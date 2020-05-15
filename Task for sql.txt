@@ -1,5 +1,7 @@
 TASK:
 we have 'Orders' and 'Customers' tables. Write query in SQL to find the customer name who placed an order with less than 100$;
+Table 'Order': (order_num: 001,009,002), (order_amt: 50.5, 99.65,100), (customer_id: 05, 01; 02);
+Table 'Customers': (customer_id: 01,05,02), (customer_name: Mike, Zusi,Green), (city: New York, California, London);
 
 Solution:
 

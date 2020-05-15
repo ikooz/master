@@ -1,0 +1,27 @@
+TASK:
+we have 'Orders' and 'Customers' tables. Write query in SQL to find the customer name who placed an order with less than 100$;
+
+Solution:
+
+show databases;
+create database testdb;
+use testdb;
+create table customers (customer_id int, customer_name varchar (20), city varchar (20));
+insert into customers value ('01', 'Mike', 'New York');
+insert into customers value ('05', 'Zusi', 'California');
+insert into customers value ('02', 'Green', 'London');
+create table orders (order_num int, order_amt double, customer_id int);
+insert into orders value ('001', '50.5', '05');
+insert into orders value ('009', '99.65', '01');
+insert into orders value ('002', '100', '02');
+
+Answer:
+select distinct customer_name from customer, orders where orders.order_amt < 100;
+
+or
+
+select customer.customer_name from customer join orders on customer.customer_id = orders.customer_id where orders.order_amt < 100;
+
+or
+
+select customer.customer_name from customer natural join orders where orders.order_amt < 100;
